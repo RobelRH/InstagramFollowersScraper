@@ -14,7 +14,7 @@ enter_user = input("enter your instagram username")
 enter_pass = getpass()
 
 # opening url
-driver = webdriver.Chrome('') # you will enter you web driver path here
+driver = webdriver.Chrome('') # you will enter your chrome webdriver path here
 driver.get('https://instagram.com')
 
 # creating a function for timesleep
@@ -75,6 +75,16 @@ li[1].click()
 
 timesleep(3)
 
+fBody  = driver.find_element_by_xpath("//div[@class='isgrP']")
+scroll = 0
+amount = num_f / 5
+while scroll < int(amount): # scroll 5 times
+    driver.execute_script('arguments[0].scrollTop = arguments[0].scrollTop + arguments[0].offsetHeight;', fBody)
+    timesleep(2)
+    scroll += 1
+
+timesleep(2)
+
 # followers container
 fc = driver.find_element_by_class_name("PZuss")
 
@@ -95,14 +105,14 @@ for i in ef[0:num_f]:
     ul = driver.find_element_by_class_name("k9GMp")
     li = ul.find_elements_by_tag_name("li")
     number = li[1].find_element_by_class_name("g47SY")
-    dict = {"username":temp_username, "followers":number.text}
+    dict = {searchusername:"","username":temp_username, "followers":number.text}
     lists.append(dict)
     driver.close()
     driver.switch_to.window(driver.window_handles[0])
     time.sleep(2)
 
 with open('data.csv', 'w', newline='') as file:
-    fieldnames = ['username', 'followers']
+    fieldnames = [searchusername, 'username', 'followers']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
 
     writer.writeheader()

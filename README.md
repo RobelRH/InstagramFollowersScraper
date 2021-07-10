@@ -5,7 +5,7 @@ This project is created with python programming language.
 I used Selenium to automate the web and chrome web driver.
 
 ## Requirements
-1. you must install the necessary libraries like selenium before you run this project. you can use [pip install selenium](url)
+1. you must install the necessary libraries like selenium before you run this project. you can use ```pip install selenium```
 2. you must download chrome web driver from https://chromedriver.chromium.org/downloads
 
 ## After you run the project

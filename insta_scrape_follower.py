@@ -14,7 +14,7 @@ enter_user = input("enter your instagram username")
 enter_pass = getpass()
 
 # opening url
-driver = webdriver.Chrome('C:/Users/Robel/Documents/chromewebdriver/chromedriver.exe')
+driver = webdriver.Chrome('') # you will enter you web driver path here
 driver.get('https://instagram.com')
 
 # creating a function for timesleep

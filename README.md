@@ -17,6 +17,6 @@ After this it will go through every follower of the username you entered and scr
 
 Below there is sample scraped data from followers of kevinhart4real
 
-![sample](https://user-images.githubusercontent.com/65722317/125161615-01fd9880-e18c-11eb-9510-c86d5698009a.PNG)
+![insta_scraped_followers_data](https://user-images.githubusercontent.com/65722317/125164242-e5685d00-e199-11eb-9696-2194c05feba4.PNG)
 
 Not only this, but it also downloads the lates 3 images of the username, and creates a folder in their name and puts thier photos in that folder.
